@@ -1,0 +1,64 @@
+ body{
+    margin: auto;
+ }
+ #container{
+    margin: auto;
+
+ }
+ #head h1{
+    color: blue;
+ }
+ #welcome{
+    margin-left: -155px;
+ }
+ #labell{
+    color: black;
+    margin-left: -310px;
+ }
+ #labelsec{
+    color: black;
+    margin-left: -270px;
+ }
+input{
+    width: 350px;
+}
+#remm{
+    margin-left: 100px;
+}
+#rr{
+    margin-left: -160px;
+}
+#secrr{
+    margin-left: 60px;
+    color: blue;
+}
+#logiin{
+    width: 350px;
+    padding: 5px;
+    background: blue;
+    color: white;
+    border-color: blue;
+    border-radius: 5px;
+}
+#lllll{
+    color: blue;
+}
+#secdiv{
+    border: 2px solid rgb(142, 141, 141);
+    border-radius: 15px;
+    box-shadow: 0 0 20px ;
+    width: 400px;
+    padding: 15px;
+    margin-bottom: 105px;
+    margin-top: 65px;
+    /* margin: auto; */
+    
+}
+#foott{
+    margin-top: 0px;
+}
+#foooot{
+    margin-top: -10px;
+    background: white;
+    color: black;
+}

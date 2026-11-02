@@ -1,0 +1,416 @@
+
+/* ===== General ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* ===== Header ===== */
+#navcont {
+    width: 100%;
+    min-height: 82px;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 100;
+}
+
+#navcont nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+#nav {
+    width: 125px;
+    height: auto;
+    object-fit: contain;
+}
+
+#po,
+#pt {
+    margin: 0;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #171717;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#po {
+    color: #0866bd;
+}
+
+#po:hover,
+#pt:hover {
+    color: #087fb5;
+}
+
+#pth {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* ===== Main Edit Blog Section ===== */
+#mainsec {
+    width: 100%;
+    min-height: 500px;
+    padding: 45px 20px 60px;
+    background: #f4f6fb;
+}
+
+#add {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px 36px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+#addb {
+    margin: 0 0 24px;
+    padding-bottom: 18px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #172536;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#add form {
+    width: 100%;
+}
+
+#label1,
+#label2,
+#label3 {
+    display: block;
+    margin: 16px 0 7px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #303846;
+    
+}
+#label3{
+    padding-bottom: 20px;
+}
+
+/* Title */
+#input1 {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid #d4dce8;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #222222;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#input1:focus,
+#input2:focus {
+    border-color: #0785bd;
+    box-shadow: 0 0 0 3px rgba(7, 133, 189, 0.1);
+}
+
+/* Description */
+#input2 {
+    display: block;
+    width: 100%;
+    min-height: 190px;
+    margin: 0;
+    padding: 13px 14px;
+    border: 1px solid #d4dce8;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #222222;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Image Upload */
+#input3 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 52px;
+    margin: 0;
+    padding: 12px;
+    border: 1px dashed #b8c7dc;
+    border-radius: 9px;
+    background: #f9fbff;
+    color: #333333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#input3:hover {
+    border-color: #0785bd;
+    background: #f3faff;
+}
+
+/* Submit Button */
+#btnn {
+    width: 100%;
+    margin-top: 22px;
+}
+
+#btn1 {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #0785bd;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#btn1:hover {
+    background: #056c9a;
+}
+
+#btn1:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ==================================
+   FOOTER — FIXED
+================================== */
+#foot {
+    width: 100%;
+    margin: 0;
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 1.3fr;
+    gap: 35px;
+    align-items: start;
+    background: #050505;
+    color: #ffffff;
+    border: none;
+}
+
+/* Hide the empty footer element in JSX.
+   It was creating an extra grid item. */
+#foot > footer {
+    display: none;
+}
+
+#foot1,
+#foot2,
+#foot3,
+#foot4 {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    align-self: start;
+}
+
+#foot1 > img {
+    display: block;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 18px;
+}
+
+#foot1 p,
+#foot2 p,
+#foot3 p,
+#foot4 p {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#foot1 p img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Column headings */
+#foot2 p:first-of-type,
+#foot3 p:first-of-type,
+#foot4 p:first-of-type {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Contact Us column */
+#foot4 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+#foot4 p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+#foot4 p img {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-top: 3px;
+}
+
+/* Copyright */
+#last {
+    width: 100%;
+    margin: 0;
+    padding: 18px 15px;
+    background: #202020;
+    color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #333333;
+}
+
+#last br {
+    display: none;
+}
+
+#last p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+    #navcont {
+        gap: 18px;
+        padding: 12px 18px;
+    }
+
+    #nav {
+        width: 110px;
+    }
+
+    #po,
+    #pt,
+    #pth {
+        font-size: 14px;
+    }
+
+    #add {
+        max-width: 700px;
+    }
+
+    #foot {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        padding: 35px 6%;
+    }
+
+    #foot4 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    #navcont {
+        min-height: auto;
+        padding: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    #navcont nav {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #nav {
+        width: 105px;
+    }
+
+    #po,
+    #pt,
+    #pth {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #mainsec {
+        padding: 25px 12px 35px;
+    }
+
+    #add {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    #addb {
+        font-size: 25px;
+    }
+
+    #input1 {
+        min-height: 46px;
+    }
+
+    #input2 {
+        min-height: 160px;
+    }
+
+    #foot {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 22px;
+    }
+
+    #foot1,
+    #foot2,
+    #foot3,
+    #foot4 {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    #foot1 > img {
+        width: 125px;
+    }
+
+    #last {
+        padding: 16px 12px;
+    }
+}
