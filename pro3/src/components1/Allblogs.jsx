@@ -920,7 +920,7 @@ function AllBlogs() {
                 setError('');
 
                 const response = await fetch(
-                    'http://localhost:3000/api/blog/get-all-blogs'
+                    'https://backend-development-u7x2.onrender.com/api/blog/get-all-blogs'
                 );
 
                 const result = await response.json();
@@ -1103,7 +1103,7 @@ function AllBlogs() {
                                         cursor: 'pointer',
                                         fontWeight: '600',
                                         boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
-                                        
+
                                     }}
                                 >
                                     ✏️ Edit Blog
@@ -1116,8 +1116,7 @@ function AllBlogs() {
                                         src={
                                             blog.image.startsWith('http')
                                                 ? blog.image
-                                                : `http://localhost:3000/${blog.image}`
-                                        }
+                                                : `https://backend-development-u7x2.onrender.com/${blog.image}`}
                                         alt={blog.title || 'Blog'}
                                     />
                                 ) : (
