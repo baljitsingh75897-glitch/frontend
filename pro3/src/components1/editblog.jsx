@@ -620,8 +620,7 @@ function EditBlog() {
             ? (
                 selectedBlog.image.startsWith('http')
                     ? selectedBlog.image
-                    : `http://localhost:3000/${selectedBlog.image}`
-            )
+                    : `https://backend-development-u7x2.onrender.com/${selectedBlog.image}`)
             : ''
     );
 
@@ -653,8 +652,7 @@ function EditBlog() {
                     ? (
                         selectedBlog.image.startsWith('http')
                             ? selectedBlog.image
-                            : `http://localhost:3000/${selectedBlog.image}`
-                    )
+                            : `https://backend-development-u7x2.onrender.com/${selectedBlog.image}`)
                     : ''
             );
         } else {
@@ -750,30 +748,28 @@ function EditBlog() {
                 formData.append('image', image);
 
                 response = await fetch(
-                    `http://localhost:3000/api/blog/edit-blog/${selectedBlog._id}`,
-                    {
-                        method: 'PUT',
-                        headers: {
-                            Authorization: `Bearer ${token}`
-                        },
-                        body: formData
-                    }
+                    `https://backend-development-u7x2.onrender.com/api/blog/edit-blog/${selectedBlog._id}`,                    {
+                    method: 'PUT',
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
+                    body: formData
+                }
                 );
             } else {
                 // Sirf title aur description update
                 response = await fetch(
-                    `http://localhost:3000/api/blog/edit-blog/${selectedBlog._id}`,
-                    {
-                        method: 'PUT',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            Authorization: `Bearer ${token}`
-                        },
-                        body: JSON.stringify({
-                            title: title.trim(),
-                            description: description.trim()
-                        })
-                    }
+                    `https://backend-development-u7x2.onrender.com/api/blog/edit-blog/${selectedBlog._id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        title: title.trim(),
+                        description: description.trim()
+                    })
+                }
                 );
             }
 
