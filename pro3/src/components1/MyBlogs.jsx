@@ -910,13 +910,12 @@ function MyBlogs() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:3000/api/blog/getMyBlogs',
-                    {
-                        method: 'GET',
-                        headers: {
-                            'Authorization': token
-                        }
+                    'https://backend-development-u7x2.onrender.com/api/blog/getMyBlogs', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
                     }
+                }
                 );
 
                 const result = await response.json();
@@ -1094,8 +1093,7 @@ function MyBlogs() {
                                         src={
                                             blog.image.startsWith('http')
                                                 ? blog.image
-                                                : `http://localhost:3000/${blog.image}`
-                                        }
+                                                : `https://backend-development-u7x2.onrender.com/${blog.image}`}
                                         alt={blog.title || 'Blog'}
                                     />
                                 ) : (
