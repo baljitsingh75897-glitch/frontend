@@ -1706,12 +1706,11 @@ function AddBlog() {
             formData.append('image', image);
 
             const response = await fetch(
-                'http://localhost:3000/api/blog/add-Blog',
+                'https://backend-development-u7x2.onrender.com/api/blog/add-Blog',
                 {
                     method: 'POST',
                     headers: {
-                        // Keep this format consistent with your backend
-                        'Authorization': token
+                        'Authorization': `Bearer ${token}`
                     },
                     body: formData
                 }
