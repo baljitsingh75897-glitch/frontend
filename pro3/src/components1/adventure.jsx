@@ -337,7 +337,7 @@ function Adventure() {
             setLoading(true);
 
             const response = await fetch(
-                'http://localhost:3000/api/user/register-user',
+                'https://backend-development-u7x2.onrender.com/api/user/register-user',
                 {
                     method: 'POST',
                     headers: {
